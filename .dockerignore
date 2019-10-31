@@ -1,0 +1,14 @@
+README.md
+mvnw.cmd
+mvnw
+cloudbuild.yaml
+Jenkinsfile
+Dockerfile
+.git
+.git/*
+.idea
+.idea/*
+target/*
+!target/*jar
+hello-world.iml
+.mvn/*

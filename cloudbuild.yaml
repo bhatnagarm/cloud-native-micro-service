@@ -1,0 +1,10 @@
+#steps:
+##  - name: 'gcr.io/cloud-builders/mvn'
+##    id: mvnBuild
+##    args: ['install']
+##    timeout: 100s
+#  - name: 'gcr.io/cloud-builders/docker'
+#    id: dockerbuild
+#    args: ['build', '--tag=gcr.io/springexample/hello-world', '.']
+##    waitFor:
+##      - mvnBuild
