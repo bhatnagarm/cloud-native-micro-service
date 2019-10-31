@@ -9,7 +9,7 @@ RUN mvn -f /opt/pom.xml clean package
 ## Setup the jre version with all modules done in Stage 2
 FROM bhatnagarm/linux_trifle as packer
 #COPY --from=builder . /tmp/Context/.
-COPY --from=builder ["/opt/openjdk-12_linux-x64_bin.tar.gz","/opt/target/hello-world.jar", "/opt/"]
+COPY --from=builder ["/opt/openjdk-12_linux-x64_bin.tar.gz","/opt/target/cloud-native-micro-service.jar", "/opt/"]
 # Build our own jdk12 distro with only these modules, as first stage /opt/openjdk-12_linux-x64_bin.tar.gz
 RUN tar -C /opt -zxf /opt/openjdk-12_linux-x64_bin.tar.gz
 RUN	/opt/jdk-12/bin/jlink \
