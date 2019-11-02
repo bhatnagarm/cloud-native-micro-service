@@ -6,55 +6,68 @@ import java.util.function.Consumer;
 
 public class PersonDao {
 
-  private PersonDao() {
-    super();
-  }
-  private PersonDao(PersonDaoBuilder builder) {
-    this.name = builder.name;
-    this.age = builder.age;
-    this.gender = builder.gender;
-  }
+	private PersonDao() {
+		super();
+	}
 
-  public static PersonDaoBuilder builder() {
-    return new PersonDaoBuilder();
-  }
+	private PersonDao(PersonDaoBuilder builder) {
+		this.name = builder.name;
+		this.age = builder.age;
+		this.gender = builder.gender;
+	}
 
-  private String name;
+	public static PersonDaoBuilder builder() {
+		return new PersonDaoBuilder();
+	}
 
-  private String age;
+	private String name;
 
-  private String gender;
+	private String age;
 
-  @Override
-  public String toString() {
-    return "User: " + this.name + ", " + this.age + ", " + this.gender;
-  }
+	private String gender;
 
-  public static class PersonDaoBuilder {
+	public String getName() {
+		return name;
+	}
 
-    public String name;
-    public String age;
-    public String gender;
+	public String getAge() {
+		return age;
+	}
 
-    public PersonDaoBuilder with(
-        Consumer<PersonDaoBuilder> builderFunction) {
-      builderFunction.accept(this);
-      return this;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    /**
-     * Build method returns a copy of the object.
-     * @return PersonDao object
-     */
-    public PersonDao build() {
-      PersonDao user =  new PersonDao(this);
-      validateUserObject(user);
-      return user;
-    }
+	@Override
+	public String toString() {
+		return "User: " + this.name + ", " + this.age + ", " + this.gender;
+	}
 
-    private void validateUserObject(PersonDao personDao) {
-      Assert.notNull(personDao, "PersonDao should not be null.");
-    }
-  }
+	public static class PersonDaoBuilder {
+
+		public String name;
+		public String age;
+		public String gender;
+
+		public PersonDaoBuilder with(Consumer<PersonDaoBuilder> builderFunction) {
+			builderFunction.accept(this);
+			return this;
+		}
+
+		/**
+		 * Build method returns a copy of the object.
+		 * 
+		 * @return PersonDao object
+		 */
+		public PersonDao build() {
+			PersonDao user = new PersonDao(this);
+			validateUserObject(user);
+			return user;
+		}
+
+		private void validateUserObject(PersonDao personDao) {
+			Assert.notNull(personDao, "PersonDao should not be null.");
+		}
+	}
 
 }

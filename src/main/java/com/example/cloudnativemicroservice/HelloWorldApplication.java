@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,
     HibernateJpaAutoConfiguration.class,
     DataSourceTransactionManagerAutoConfiguration.class})
-@ComponentScan(basePackages = { "com.example.helloworld" })
+@ComponentScan(basePackages = { "com.example.cloudnativemicroservice" })
 @OpenAPIDefinition(info = @Info(title = "the title",
     version = "0.0", description = "My API",
     license = @License(name = "Apache 2.0", url = "https://opensource.org/licenses/Apache-2.0"),

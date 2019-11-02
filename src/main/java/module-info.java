@@ -1,4 +1,4 @@
-module com.example.helloworld {
+open module com.example.helloworld {
   requires spring.beans;
   requires spring.core;
   requires spring.context;
@@ -6,6 +6,8 @@ module com.example.helloworld {
   requires spring.webmvc;
   requires spring.boot;
   requires spring.boot.autoconfigure;
+  requires java.instrument;
+  requires java.sql;
   requires java.validation;
   requires com.fasterxml.jackson.databind;
   requires jackson.annotations;

@@ -2,10 +2,15 @@ package com.example.cloudnativemicroservice.exception;
 
 public class NotFoundException extends ApiException {
 
-  private int code;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3883655039777174677L;
 
-  public NotFoundException(final int code, final String msg) {
-    super(404, msg);
-    this.code = code;
-  }
+	private int code;
+
+	public NotFoundException(final int code, final String msg) {
+		super(404, msg);
+		this.code = code;
+	}
 }
