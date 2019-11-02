@@ -33,6 +33,7 @@
 				<scope>import</scope>
 			</dependency>
 			<!-- swagger ui -->
+			<!-- Swagger URL: http://localhost:8080/swagger-ui.html -->
 			<dependency>
 				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-ui</artifactId>
