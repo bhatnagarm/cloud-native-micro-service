@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HelloControllerTest {
+public class HelloRestControllerTest {
 
-  private HelloController helloController;
+  private HelloRestController helloController;
 
   @Before
   public void setUp() {
-    helloController = new HelloController();
+    helloController = new HelloRestController();
   }
 
   @Test

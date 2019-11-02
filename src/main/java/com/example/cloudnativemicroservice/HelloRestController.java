@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Tag(name = "hello_world")
-class HelloController {
+class HelloRestController {
 
   @GetMapping("/hello/{name}")
   @Operation(description = "Hello World", responses = {
