@@ -2,7 +2,7 @@
 FROM maven:latest as builder
 #COPY . /tmp/Context/.
 COPY . /opt/.
-RUN wget https://download.java.net/java/GA/jdk12/33/GPL/openjdk-12_linux-x64_bin.tar.gz -O /opt/openjdk-12_linux-x64_bin.tar.gz
+RUN curl https://download.java.net/java/GA/jdk12/33/GPL/openjdk-12_linux-x64_bin.tar.gz -o /opt/openjdk-12_linux-x64_bin.tar.gz
 #COPY /opt/.javaw/wrapper/openjdk-12_linux-x64_bin.tar.gz /opt/openjdk-12_linux-x64_bin.tar.gz
 RUN mvn -f /opt/pom.xml clean package
 
