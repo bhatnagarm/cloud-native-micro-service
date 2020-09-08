@@ -2,7 +2,7 @@ package com.example.cloudnativemicroservice.core;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ChainTask<T> {
+public class ChainTask {
 
   static String startChain(String start) {
     return start + "Start of the Chain. \n";
@@ -38,9 +38,9 @@ public class ChainTask<T> {
 
   }*/
 
-/*  public static void main(String[] args) {
+  public static void main(String[] args) {
     MyTask.chainInfo();
 
-  }*/
+  }
 
 }

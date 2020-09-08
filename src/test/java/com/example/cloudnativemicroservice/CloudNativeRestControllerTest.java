@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HelloRestControllerTest {
+public class CloudNativeRestControllerTest {
 
-  private HelloRestController helloController;
+  private CloudNativeRestController helloController;
 
   @Before
   public void setUp() {
-    helloController = new HelloRestController();
+    helloController = new CloudNativeRestController();
   }
 
   @Test
